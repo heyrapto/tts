@@ -67,24 +67,6 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
       </button>
 
       <div className="p-4 overflow-y-auto custom-scrollbar overflow-x-hidden">
-        {/* Logo */}
-        <div 
-          className={`flex items-center gap-2.5 mb-8 cursor-pointer transition-all ${isCollapsed ? "justify-center" : "px-2"}`} 
-          onClick={() => onViewChange("tts")}
-        >
-          <div className="w-8 h-8 shrink-0 bg-gray-900 rounded-lg flex items-center justify-center text-white">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-            </svg>
-          </div>
-          {!isCollapsed && (
-            <span className="text-[15px] font-bold text-gray-900 tracking-tight whitespace-nowrap overflow-hidden">
-              tts studio
-            </span>
-          )}
-        </div>
 
         {/* Tools Section */}
         <div className="space-y-1">
@@ -99,7 +81,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
             onClick={() => onViewChange("tts")}
             className={`w-full flex items-center gap-3 px-3 py-2.5 text-[13px] rounded-lg transition-all duration-150 cursor-pointer overflow-hidden
               ${activeView === "tts"
-                ? "bg-gray-100 text-gray-900 font-semibold shadow-sm"
+                ? "bg-gray-100 text-gray-900 font-semibold"
                 : "text-gray-500 hover:bg-gray-50 hover:text-gray-900 font-medium"
               } ${isCollapsed ? "justify-center" : ""}`}
           >
@@ -112,7 +94,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
             onClick={() => onViewChange("translate")}
             className={`w-full flex items-center gap-3 px-3 py-2.5 text-[13px] rounded-lg transition-all duration-150 cursor-pointer overflow-hidden
               ${activeView === "translate"
-                ? "bg-gray-100 text-gray-900 font-semibold shadow-sm"
+                ? "bg-gray-100 text-gray-900 font-semibold "
                 : "text-gray-500 hover:bg-gray-50 hover:text-gray-900 font-medium"
               } ${isCollapsed ? "justify-center" : ""}`}
           >
@@ -125,7 +107,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
             onClick={() => onViewChange("image")}
             className={`w-full flex items-center gap-3 px-3 py-2.5 text-[13px] rounded-lg transition-all duration-150 cursor-pointer overflow-hidden
               ${activeView === "image"
-                ? "bg-gray-100 text-gray-900 font-semibold shadow-sm"
+                ? "bg-gray-100 text-gray-900 font-semibold"
                 : "text-gray-500 hover:bg-gray-50 hover:text-gray-900 font-medium"
               } ${isCollapsed ? "justify-center" : ""}`}
           >
@@ -194,7 +176,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
           {/* Subtle multi-color glow shadow */}
           <div className="absolute -inset-[2px] bg-gradient-to-r from-emerald-200 via-sky-200 to-blue-200 rounded-full blur-[4px] opacity-80"></div>
           
-          <button 
+          {/* <button 
             title="Buy Credits"
             onClick={() => onViewChange("credits")}
             className={`relative flex items-center gap-1.5 bg-white rounded-full shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer
@@ -202,7 +184,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
           >
             <ShoppingCart className="w-[15px] h-[15px] text-gray-900 stroke-[2.5]" />
             {!isCollapsed && <span className="text-[13px] font-semibold text-gray-900 pr-1">Buy</span>}
-          </button>
+          </button> */}
         </div>
 
       </div>
