@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { useAppStore } from "../store/use-app-store";
 import { supabase } from "../lib/supabase";
-import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
